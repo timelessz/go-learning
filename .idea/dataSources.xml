@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="规模以上企业汇总" uuid="a38198fa-01f9-4bc2-963f-52e02c242157">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://rdsfjnifbfjnifbo.mysql.rds.aliyuncs.com:3306/bigbusiness</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="madeinchina@rdsfjnifbfjnifbo.mysql.rds.aliyuncs.com" uuid="958bffa2-348b-42df-ba85-b0fe8516bcb0">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>madeinchina</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://rdsfjnifbfjnifbo.mysql.rds.aliyuncs.com:3306/madeinchina</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>
