@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+// 定义你的包名
+package echo;
+
+import "google/api/annotations.proto";
+
+// 定义你的服务名
+service Echo {
+  // 定义一个方法Echo,输入 EchoRequest ,输出 EchoResponse
+  // EchoRequest 和EchoResponse 在下面的代码中定义
+  rpc Echo (EchoRequest) returns (EchoResponse) {
+    option (google.api.http) = {
+      // http接口使用GET方法路由至/echo, 所有的字段都会放到query string中
+      get: "/echo"
+    };
+  }
+
+  // 定义一个方法Louder,输入 LouderRequest ,输出 EchoResponse
+  rpc Louder (LouderRequest) returns (EchoResponse) {
+    option (google.api.http) = {
+      // http接口使用POST方法路由至/louder/{Loudness}
+      post: "/louder/{Loudness}"
+      // 所有字段都会被从Body中以http/json方式获取
+      body: "*"
+    };
+  }
+}
+
+message EchoRequest {
+  string In = 1;
+}
+
+message LouderRequest {
+  // In is the string to echo back
+  string In = 1;
+  // Loudness is the number of exclamations marks to add to the echoed string
+  int32 Loudness = 2;
+}
+
+message EchoResponse {
+  string Out = 1;
+}

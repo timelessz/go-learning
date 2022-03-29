@@ -1,0 +1,11 @@
+syntax = "proto3"; // 版本声明，使用Protocol Buffers v3版本
+
+option go_package = "pb/proto_demo"; //包名
+
+
+message Student {
+  string name = 1;
+  bool male = 2;
+  repeated int32 scores = 3;
+  map<string, int32> subject = 4;
+}
